@@ -26,7 +26,13 @@ class Circle(Area):
     def area(self):
         print(f"Area of {self.name} is {3.14*self.radius**2}")
 
+class Elips(Circle):
+    def __init__(self, name, radius, radius_big):
+        super().__init__(name, radius)
+        self.radius_big = radius_big
 
+    def area(self):
+        print(f"Area of {self.name} is {3.14*self.radius*self.radius_big}")
     
 square = Square("squere",3)
 square.area()
@@ -34,3 +40,5 @@ rectangle = Rectangle("rectangle",3, 4)
 rectangle.area()
 circle = Circle("circle",10)
 circle.area()
+elips = Elips("circle",10, 30)
+elips.area()
